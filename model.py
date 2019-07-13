@@ -24,7 +24,7 @@ X_test = X_test / 255
 
 sgd = SGD(lr = 0.01, decay = 0.01)
 
-model.compile(optimizer = sgd, loss = 'sparse_categorical_crossentropy', metrics = ['accuracy'])
+model.compile(optimizer = 'adam', loss = 'sparse_categorical_crossentropy', metrics = ['accuracy'])
 
 model.fit(X_train, y_train, epochs = 5)
 
